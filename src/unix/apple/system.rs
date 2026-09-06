@@ -332,6 +332,10 @@ impl SystemInner {
         &mut self.process_list
     }
 
+    pub(crate) fn into_processes(self) -> HashMap<Pid, Process> {
+        self.process_list
+    }
+
     pub(crate) fn process(&self, pid: Pid) -> Option<&Process> {
         self.process_list.get(&pid)
     }

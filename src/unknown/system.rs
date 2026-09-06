@@ -55,6 +55,10 @@ impl SystemInner {
         unreachable!()
     }
 
+    pub(crate) fn into_processes(self) -> HashMap<Pid, Process> {
+        unreachable!()
+    }
+
     pub(crate) fn process(&self, _pid: Pid) -> Option<&Process> {
         unreachable!()
     }

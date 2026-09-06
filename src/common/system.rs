@@ -486,6 +486,11 @@ impl System {
         self.inner.processes()
     }
 
+    /// Returns the process list by value, consuming `self` in the process
+    pub fn into_processes(self) -> HashMap<Pid, Process> {
+        self.inner.into_processes()
+    }
+
     /// Returns the process corresponding to the given `pid` or `None` if no such process exists.
     ///
     /// ```no_run
